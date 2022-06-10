@@ -1,5 +1,12 @@
+import { Flex } from "@chakra-ui/react";
+import { BannerHome } from "../components/BannerHome";
+import { Header } from "../components/Header";
+
 export default function Home() {
   return (
-    <h1>Desafio 1</h1>
+    <Flex direction="column" h="100vh">
+      <Header />
+      <BannerHome />
+    </Flex>
   )
 }

@@ -14,15 +14,17 @@ export const theme = extendTheme({
       "100": "#D1D2DC",
       "50": "#EEEEF2",
     },
+    background: '#F5F8FA',
+    heading: '#47585B',
   },
   fonts: {
-    heading: 'Roboto',
-    body: 'Roboto',
+    heading: 'Poppins',
+    body: 'Poppins',
   },
   styles: {
     global: {
       body: {
-        bg: 'gray.900',
+        bg: 'background',
         color: 'gray.50'
       }
     }
