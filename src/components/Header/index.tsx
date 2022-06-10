@@ -27,7 +27,6 @@ export function Header() {
       align="center"
     >
       {isActive && <BackLink />}
-      <BackLink />
       <Logo />
     </Flex>
   )
