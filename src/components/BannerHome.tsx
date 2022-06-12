@@ -8,11 +8,12 @@ export function BannerHome() {
       maxH="368px"
     >
       <Box 
-        bgImage="url('./bg-banner.jpg')"
+        bgImage="url('./images/bg-banner.jpg')"
         bgPosition="center"
         bgSize="cover"
         bgRepeat="no-repeat"
         h={["240","368"]}
+        color="gray.50"
       >
         <Container display="flex" alignItems="center" justifyContent="space-between" w="100%" h="100%" maxW="1440" position="relative">
           <Stack spacing={8} maxW="550">
@@ -24,7 +25,7 @@ export function BannerHome() {
             </Heading>
           </Stack>
           <Box mt="150px">
-            <Image src="./Airplane.png" alt="airplane" />
+            <Image src="./images/Airplane.png" alt="airplane" />
           </Box>
         </Container>
       </Box>
