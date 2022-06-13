@@ -1,3 +1,13 @@
-.mySwiper .swiper-button-next, .mySwiper .swiper-button-prev, .mySwiper .swiper-pagination-bullet {
+.mySwiper .swiper-button-next, .mySwiper .swiper-button-prev {
   color: #ffba08;
+}
+.mySwiper span.swiper-pagination-bullet {
+  background-color: #ccc;
+  width: 1rem;
+  height: 1rem;
+}
+.mySwiper span.swiper-pagination-bullet-active {
+  background-color: #ffba08;
+  width: 1rem;
+  height: 1rem;
 }

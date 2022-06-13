@@ -6,7 +6,7 @@ import { SwiperBanner } from "../components/SwiperBanner";
 
 export default function Home() {
   return (
-    <Flex direction="column" h="100vh">
+    <Flex direction="column" h="100%">
       <Header />
       <BannerHome />
       <Categories />
