@@ -1,4 +1,5 @@
 import { extendTheme } from '@chakra-ui/react'
+import { RiArrowGoBackFill } from 'react-icons/ri'
 
 export const theme = extendTheme({
   colors: {
@@ -17,6 +18,7 @@ export const theme = extendTheme({
     background: '#F5F8FA',
     heading: '#47585B',
     highlight: '#ffba08',
+    highlight50: 'rgba(255,186,8,0.5)',
   },
   fonts: {
     heading: 'Poppins',

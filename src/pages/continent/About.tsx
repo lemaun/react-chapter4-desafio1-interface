@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { Flex, Heading, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 
 export function About() {
   return (
@@ -11,7 +11,6 @@ export function About() {
       <SimpleGrid
         columns={[1,2]}
         spacing="20"
-        
       >
         <Text textAlign="justify" fontSize="24">
           A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste

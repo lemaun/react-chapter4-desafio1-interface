@@ -1,7 +1,8 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import { Header } from "../../components/Header";
 import { BannerContinent } from "./BannerContinent";
 import { About } from "./About";
+import { CidadesItem } from "./CidadesItem";
 
 export default function Continent() {
   return (
@@ -19,7 +20,17 @@ export default function Continent() {
                  
         <Heading fontSize="36" lineHeight="54px" fontWeight="500">Cidades +100</Heading>
         
-
+        <SimpleGrid
+          columns={[1,2,3,4]}
+          spacing="20"
+          mt="10"
+        >
+          <CidadesItem />
+          <CidadesItem />
+          <CidadesItem />
+          <CidadesItem />
+          <CidadesItem />
+        </SimpleGrid>
       </Box>
     </Flex>
   )
