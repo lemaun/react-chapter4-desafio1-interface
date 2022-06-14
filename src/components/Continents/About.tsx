@@ -1,4 +1,5 @@
-import { Flex, Heading, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { Flex, Heading, Icon, SimpleGrid, Stack, Text, Tooltip, VStack } from "@chakra-ui/react";
+import { RiInformationLine } from "react-icons/ri";
 
 export function About() {
   return (
@@ -51,6 +52,9 @@ export function About() {
               fontWeight="semibold"
             >
               cidades +100
+              <Tooltip label="As 100 melhores cidades para visitar" hasArrow>
+                <span><Icon as={RiInformationLine} color='gray.200' fontSize='lg' ml='2'/></span>
+              </Tooltip>
             </Text>
           </VStack>
 

@@ -1,8 +1,8 @@
 import { Box, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
-import { Header } from "../../components/Header";
-import { BannerContinent } from "./BannerContinent";
-import { About } from "./About";
-import { CidadesItem } from "./CidadesItem";
+import { Header } from "../components/Header";
+import { BannerContinent } from "../components/Continents/BannerContinent";
+import { About } from "../components/Continents/About";
+import { CidadesItem } from "../components/Continents/CidadesItem";
 
 export default function Continent() {
   return (
