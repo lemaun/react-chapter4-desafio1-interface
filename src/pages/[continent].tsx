@@ -3,8 +3,24 @@ import { Header } from "../components/Header";
 import { BannerContinent } from "../components/Continents/BannerContinent";
 import { About } from "../components/Continents/About";
 import { CidadesItem } from "../components/Continents/CidadesItem";
+import { useEffect, useState } from "react";
+
 
 export default function Continent() {
+  const [data, setData] = useState([])
+  async function getData() {
+    const res = await fetch('/api/getContinent', {
+      method: 'POST',
+      body: "europa",
+      
+    })
+    const newData = await res.json()
+    setData(newData)
+  }
+  useEffect(() => {
+    getData()
+  },[])
+  console.log(data)
   return (
     <Flex direction="column" h="100%">
       <Header />
