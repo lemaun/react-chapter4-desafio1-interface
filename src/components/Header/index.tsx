@@ -22,7 +22,7 @@ export function Header() {
       w="100%"
       maxWidth={1440}
       mx="auto"
-      my="8"
+      my={[4,8]}
       px="6"
       align="center"
     >

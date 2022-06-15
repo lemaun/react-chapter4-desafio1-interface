@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Stack } from "@chakra-ui/react";
+import { Box, Flex, HStack, SimpleGrid, Stack } from "@chakra-ui/react";
 import { CategoryItem } from "./CategoryItem";
 
 export function Categories() {
@@ -6,15 +6,14 @@ export function Categories() {
     <Flex
       w="100%"
       maxW="1440px"
-      mt="40"
+      mt={["10","40"]}
       mx="auto"
     >
-      <Stack
-        direction={["column","row"]}
-        // spacing="6"
-        justify="space-between"
-        align="center"
+      <SimpleGrid
         w="100%"
+        columns={[2,3,5]}
+        spacing={["5","20"]}
+        px={[10,0]}
       >
         <CategoryItem category={"vida noturna"} icon={"cocktail"}/>
         <CategoryItem category={"praia"} icon={"surf"}/>
@@ -22,7 +21,7 @@ export function Categories() {
         <CategoryItem category={"clássico"} icon={"museum"}/>
         <CategoryItem category={"e mais..."} icon={"earth"}/>
         
-      </Stack>
+      </SimpleGrid>
     </Flex>
   )
 }

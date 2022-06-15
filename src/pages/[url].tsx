@@ -51,24 +51,23 @@ export default function Continent({ continent }: ContinentProps): JSX.Element {
         w="100%"
         maxW="1440px"
         mx="auto"
-        my="20"
+        my={["0","20"]}
+        px={[5,0]}
       >
                  
-        <Heading fontSize="36" lineHeight="54px" fontWeight="500">Cidades +100</Heading>
+        <Heading fontSize={["24","36"]} lineHeight="54px" fontWeight="500">Cidades +100</Heading>
         
         <SimpleGrid
           columns={[1,2,3,4]}
-          spacing="20"
-          mt="10"
+          spacing={["5","20"]}
+          mt={["5","10"]}
+          px={[10,0]}
+          pb={[5,0]}
         >
           {continent.cities100.map(city => (
             <CidadesItem key={city.name} nome={city.name} pais={city.country} img={city.img} bandeira={city.flag} />  
           ))}
-          {/* <CidadesItem />
-          <CidadesItem />
-          <CidadesItem />
-          <CidadesItem />
-          <CidadesItem /> */}
+          
         </SimpleGrid>
       </Box>
     </Flex>

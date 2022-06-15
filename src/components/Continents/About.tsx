@@ -15,14 +15,15 @@ export function About({sobre, indices}: AboutProps) {
     <Flex
       w="100%"
       maxW="1440px"
-      mt={["10","20"]}
+      my={["6","20"]}
       mx="auto"
+      px={[5,0]}
     >
       <SimpleGrid
         columns={[1,2]}
-        spacing="20"
+        spacing={["5","20"]}
       >
-        <Text textAlign="justify" fontSize="24">
+        <Text textAlign="justify" fontSize={["14","24"]}>
           {sobre}
         </Text>    
 
@@ -32,40 +33,40 @@ export function About({sobre, indices}: AboutProps) {
           align="center"
           w="100%"
         >
-          <VStack>
-            <Heading color="highlight" fontSize="48">{indices.countries}</Heading>
+          <Flex justifyContent={["start","center"]} direction={"column"}>
+            <Heading color="highlight" fontSize={["24","48"]}>{indices.countries}</Heading>
             <Text 
               color="heading"
-              fontSize="24"
-              fontWeight="semibold"
+              fontSize={["18","24"]}
+              fontWeight={["normal","semibold"]}
             >
               países
             </Text>
-          </VStack>
-          <VStack>
-            <Heading color="highlight" fontSize="48">{indices.laguages}</Heading>
+          </Flex>
+          <Flex justifyContent={["start","center"]} direction={"column"}>
+            <Heading color="highlight" fontSize={["24","48"]}>{indices.laguages}</Heading>
             <Text 
               color="heading"
-              fontSize="24"
-              fontWeight="semibold"
+              fontSize={["18","24"]}
+              fontWeight={["normal","semibold"]}
             >
               línguas
             </Text>
-          </VStack>
+          </Flex>
 
-          <VStack>
-            <Heading color="highlight" fontSize="48">{indices.cities}</Heading>
+          <Flex justifyContent={["start","center"]} direction={"column"}>
+            <Heading color="highlight" fontSize={["24","48"]}>{indices.cities}</Heading>
             <Text 
               color="heading"
-              fontSize="24"
-              fontWeight="semibold"
+              fontSize={["18","24"]}
+              fontWeight={["normal","semibold"]}
             >
               cidades +100
               <Tooltip label={`As ${indices.cities} melhores cidades para visitar`} hasArrow>
-                <span><Icon as={RiInformationLine} color='gray.200' fontSize='lg' ml='2'/></span>
+                <span><Icon as={RiInformationLine} color='gray.200' fontSize={['xs','lg']} ml='2'/></span>
               </Tooltip>
             </Text>
-          </VStack>
+          </Flex>
 
         </Stack> 
       </SimpleGrid>

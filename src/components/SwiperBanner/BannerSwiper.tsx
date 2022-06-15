@@ -28,7 +28,6 @@ export function BannerSwiper() {
       modules={[Navigation, Pagination]}
       className="mySwiper"
     >
-      {console.log(data)}
       {data.length > 0 && (
         data.map((d) => (
           <SwiperSlide key={d.data.url}>
@@ -39,14 +38,14 @@ export function BannerSwiper() {
                 bgRepeat="no-repeat"
                 bgSize="cover"
                 w="100%"
-                h="450px"
+                h={["250px","450px"]}
                 align="center"
                 color="gray.50"
                 justify="center"
                 direction={["column"]}
               >
-                <Heading fontSize="48px" lineHeight="100px">{d.data.name}</Heading>
-                <Heading fontSize="24px">{d.data.slide.desc}</Heading>
+                <Heading fontSize={["24px","48px"]} lineHeight={["50px","100px"]}>{d.data.name}</Heading>
+                <Heading fontSize={["14px","24px"]}> {d.data.slide.desc} </Heading>
               </Flex>
             </Link>
           </SwiperSlide>
