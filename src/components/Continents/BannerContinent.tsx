@@ -1,13 +1,18 @@
-import { Box, Container, Flex, Heading, Stack } from '@chakra-ui/react';
+import { Box, Container, Heading } from '@chakra-ui/react';
 
-export function BannerContinent() {
+interface BannerProps {
+  banner: string,
+  name: string,
+}
+
+export function BannerContinent({banner, name}: BannerProps) {
   return (
     <Box
       as="section"
       maxH="500px"
     >
       <Box 
-        bgImage="url('/images/bg-europa.png')"
+        bgImage={banner}
         bgPosition="center"
         bgSize="cover"
         bgRepeat="no-repeat"
@@ -17,7 +22,7 @@ export function BannerContinent() {
         <Container display="flex" alignItems={["center","end"]} justifyContent={["center","start"]} w="100%" h="100%" maxW="1440" pb={["0","10"]} position="relative">
           
             <Heading fontWeight="medium" fontSize={["36","48"]}>
-              Europa
+              {name}
             </Heading>
           
         </Container>

@@ -4,9 +4,6 @@ import { fauna } from "../../services/fauna"
 
 type Continent = {
   data: {
-    ref: {
-      id:string,
-    },
     name: string,
     url: string,
     bannerHeader: string,
@@ -16,14 +13,13 @@ type Continent = {
       laguages: number,
       cities: number,
     },
-    cities100: [
+    cities100: 
       {
         name: string,
         country: string,
         img: string,
         flag: string,
-      }
-    ]
+      }[]
   }
 }
 
@@ -38,10 +34,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     )
 
     // let continentId = continent.data.ref.id
-    // let dados = continent.data
-    // console.log(continent.data[0].ref)
+    let dados = continent.data[0].data
+    // console.log(dados)
 
-    res.status(200).json(continent)
+    res.status(200).json(dados)
   } catch(error) {
     // console.log(error.message)
     res.status(500).end('Method not allowed')

@@ -1,7 +1,16 @@
 import { Flex, Heading, Icon, SimpleGrid, Stack, Text, Tooltip, VStack } from "@chakra-ui/react";
 import { RiInformationLine } from "react-icons/ri";
 
-export function About() {
+interface AboutProps {
+  sobre: string;
+  indices: {
+    countries: number;
+    laguages: number;
+    cities: number;
+  }
+}
+
+export function About({sobre, indices}: AboutProps) {
   return (
     <Flex
       w="100%"
@@ -14,7 +23,7 @@ export function About() {
         spacing="20"
       >
         <Text textAlign="justify" fontSize="24">
-          A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+          {sobre}
         </Text>    
 
         <Stack
@@ -24,7 +33,7 @@ export function About() {
           w="100%"
         >
           <VStack>
-            <Heading color="highlight" fontSize="48">50</Heading>
+            <Heading color="highlight" fontSize="48">{indices.countries}</Heading>
             <Text 
               color="heading"
               fontSize="24"
@@ -34,7 +43,7 @@ export function About() {
             </Text>
           </VStack>
           <VStack>
-            <Heading color="highlight" fontSize="48">60</Heading>
+            <Heading color="highlight" fontSize="48">{indices.laguages}</Heading>
             <Text 
               color="heading"
               fontSize="24"
@@ -45,14 +54,14 @@ export function About() {
           </VStack>
 
           <VStack>
-            <Heading color="highlight" fontSize="48">27</Heading>
+            <Heading color="highlight" fontSize="48">{indices.cities}</Heading>
             <Text 
               color="heading"
               fontSize="24"
               fontWeight="semibold"
             >
               cidades +100
-              <Tooltip label="As 100 melhores cidades para visitar" hasArrow>
+              <Tooltip label={`As ${indices.cities} melhores cidades para visitar`} hasArrow>
                 <span><Icon as={RiInformationLine} color='gray.200' fontSize='lg' ml='2'/></span>
               </Tooltip>
             </Text>

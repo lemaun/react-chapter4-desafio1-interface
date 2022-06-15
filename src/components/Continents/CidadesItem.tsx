@@ -1,6 +1,13 @@
 import { Text, Image, Flex, Box } from "@chakra-ui/react";
 
-export function CidadesItem() {
+interface CidadeProps {
+  nome:string;
+  pais:string;
+  img:string;
+  bandeira:string;
+}
+
+export function CidadesItem({ nome, pais, img, bandeira }: CidadeProps ) {
   return (
     <Flex
       direction="column"
@@ -9,7 +16,7 @@ export function CidadesItem() {
       borderColor="highlight50"
       borderRadius={5}
     >
-      <Image src="/images/cities/london.png"  alt="london" mb="4" w="100%"/>
+      <Image src={img}  alt="london" mb="4" w="100%"/>
       <Flex alignItems="center" justify="space-between" gap="2" mb='4' px="8">
         <Box>
           <Text 
@@ -18,14 +25,14 @@ export function CidadesItem() {
             fontWeight="semibold"
             mb="4"
             >
-            Londres  
+            {nome}  
           </Text>
           <Text 
             color="gray.200"
             fontSize="16"
             fontWeight="400"
             >
-            Reino Unido  
+            {pais}  
           </Text>
         </Box>
         
@@ -34,8 +41,8 @@ export function CidadesItem() {
           <Image
             borderRadius='full'
             boxSize='30px'
-            src='/images/flags/london.png'
-            alt='london'
+            src={bandeira}
+            alt={nome}
           />
         </Box>
       </Flex>
