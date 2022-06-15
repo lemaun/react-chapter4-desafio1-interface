@@ -16,7 +16,7 @@ export function CidadesItem({ nome, pais, img, bandeira }: CidadeProps ) {
       borderColor="highlight50"
       borderRadius={5}
     >
-      <Image src={img}  alt="london" mb="4" w="100%"/>
+      <Image src={img}  alt={nome} mb="4" w="100%"/>
       <Flex alignItems="center" justify="space-between" gap="2" mb='4' px="8">
         <Box>
           <Text 
